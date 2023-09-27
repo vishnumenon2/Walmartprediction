@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tab: DS Project</title>
+        
+        <style>
+            body{ text-align : center;}
+            button{ background-color : blue;
+                    color: white; }
+            
+            .container {
+                margin: 0 auto;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                }
+            input{
+                width:250px;
+                height:30px;
+                padding:5px;
+                margin: 5px;
+                
+            }
+            form{
+                margin:3px;
+                padding:5px;
+            }
+            button{
+                margin-top:10px;
+            }
+            
+        </style>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container" style="background-color: #ffffe0;" "width:600px" "height:20px"> 
+        <img src="https://revcycleintelligence.com/images/site/features/_normal/WalmartLogo.jpg">
+        
+        <h1>
+            Walmart Sales Forecast and Prediction
+        </h1>
+
+        <form method="post" action="/predict">
+            <input type='text' name="store" placeholder = "Enter Store(1-45) : "></input >
+            <input type='text' name="holiday" placeholder = "Enter  whether holiday-week(1) or not (0): "></input >
+            <input type='text' name="temperature" placeholder = "Enter Temperature(-2 to 100) : "></input>
+            <input type='text' name="fuelprice" placeholder = "Enter Fuel Price (2.47 - 4.46): "></input >
+            <input type='text' name="cpi" placeholder = "Enter CPI (126 - 227): "></input >         
+            <input type='text' name="unemployment" placeholder = "Enter Unemployment rate (3.87 - 14.3): "></input>
+            <input type='text' name="week" placeholder = "Enter  week (1 - 52): "></input>
+            <input type='text' name="weekday" placeholder = "Enter  weekday (0-6): "></input>
+            <div>
+                <button>Enter</button>
+                <a href="/">Reset</a>
+            </div>
+
+            <h2>Predicted Average Weekly Sales is: {{ result }}</h2>
+        </div>
+        </form>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
